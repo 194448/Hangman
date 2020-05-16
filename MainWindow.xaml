@@ -5,9 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Hangman"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" WindowState="Maximized">
     <StackPanel>
-        <TextBlock x:Name="WordHint"></TextBlock>
-        
+        <TextBlock x:Name="WordHint" Margin="15"></TextBlock>
+        <Label x:Name="lblWord2Guess" Visibility="Hidden"/>
+        <Button x:Name="btnGuess" Content="Guess the word" Click="btnGuess_Click"/>
+        <TextBox x:Name="txtbxInput" Margin="10"/>
+        <Label x:Name="lblWin" Content="Correct Guess!" FontSize="46" Margin="5" Visibility="Collapsed"/>
+        <StackPanel x:Name="LetterLocation" Orientation="Horizontal" Margin="35">
+            
+        </StackPanel>
+        <Button x:Name="btnReset" Content="New Game" Click="btnReset_Click"/>
     </StackPanel>
 </Window>
